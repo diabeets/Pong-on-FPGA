@@ -1,0 +1,63 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/student2/j6dai/coe758/pong/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/student2/j6dai/coe758/pong/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/student2/j6dai/coe758/pong/draw.vhd" in Library work.
+Entity <draw> compiled.
+ERROR:HDLParsers:3312 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 60. Undefined symbol 'to_integer'.
+ERROR:HDLParsers:1209 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 60. to_integer: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 60. Undefined symbol 'unsigned'.
+ERROR:HDLParsers:1209 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 60. unsigned: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 67. Undefined symbol 'hPos'.  Should it be: Pos?
+ERROR:HDLParsers:1209 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 67. hPos: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 67. Undefined symbol 'vPos'.  Should it be: Pos?
+ERROR:HDLParsers:1209 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 67. vPos: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 67. Undefined symbol 'vid_on'.  Should it be: vidon?
+ERROR:HDLParsers:1209 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 67. vid_on: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 75. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 78. >= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 78. - can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 78. >= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 78. <= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 79. >= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 79. <= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 85. >= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 85. <= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 85. >= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 85. <= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 86. >= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 86. <= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 86. >= can not have such operands in this context.
+ERROR:HDLParsers:808 - "/home/student2/j6dai/coe758/pong/draw.vhd" Line 86. <= can not have such operands in this context.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+
+
+Total memory usage is 595596 kilobytes
+
+Number of errors   :   25 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

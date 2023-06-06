@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/student2/j6dai/coe758/pong/impact.xsl
+OUTFILE=/home/student2/j6dai/coe758/pong/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/student2/j6dai/coe758/pong
+LICENSE=iMPACT
+USER_INFO=iMPACT

@@ -1,0 +1,584 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: pong.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pong.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pong"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : pong
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/student2/j6dai/coe758/pong/pong.vhd" in Library work.
+Entity <pong> compiled.
+Entity <pong> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <pong> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <pong> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "/home/student2/j6dai/coe758/pong/pong.vhd" line 307: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "/home/student2/j6dai/coe758/pong/pong.vhd" line 282: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <reset>
+WARNING:Xst:819 - "/home/student2/j6dai/coe758/pong/pong.vhd" line 319: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <reset>
+Entity <pong> analyzed. Unit <pong> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <pong>.
+    Related source file is "/home/student2/j6dai/coe758/pong/pong.vhd".
+WARNING:Xst:653 - Signal <reset> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found 1-bit register for signal <H_sync_VGA>.
+    Found 1-bit register for signal <V_sync_VGA>.
+    Found 1-bit register for signal <DAC_CLK>.
+    Found 8-bit register for signal <Red_VGA>.
+    Found 8-bit register for signal <Green_VGA>.
+    Found 8-bit register for signal <Blue_VGA>.
+    Found 32-bit up counter for signal <b_count>.
+    Found 32-bit adder for signal <bBot>.
+    Found 32-bit register for signal <bLeft>.
+    Found 32-bit addsub for signal <bLeft$addsub0000>.
+    Found 2-bit register for signal <bMove>.
+    Found 32-bit comparator greater for signal <bMove_1$cmp_gt0000> created at line 336.
+    Found 32-bit comparator greater for signal <bMove_1$cmp_gt0001> created at line 347.
+    Found 32-bit comparator greater for signal <bMove_1$cmp_gt0002> created at line 347.
+    Found 32-bit comparator greater for signal <bMove_1$cmp_gt0003> created at line 351.
+    Found 32-bit comparator greater for signal <bMove_1$cmp_gt0004> created at line 351.
+    Found 32-bit comparator less for signal <bMove_1$cmp_lt0000> created at line 336.
+    Found 32-bit comparator less for signal <bMove_1$cmp_lt0001> created at line 347.
+    Found 32-bit comparator less for signal <bMove_1$cmp_lt0002> created at line 347.
+    Found 32-bit comparator less for signal <bMove_1$cmp_lt0003> created at line 351.
+    Found 32-bit comparator less for signal <bMove_1$cmp_lt0004> created at line 351.
+    Found 32-bit adder for signal <bRight$add0000> created at line 317.
+    Found 32-bit register for signal <bTop>.
+    Found 32-bit addsub for signal <bTop$addsub0000>.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0000> created at line 375.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0001> created at line 375.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0002> created at line 383.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0003> created at line 383.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0004> created at line 383.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0005> created at line 391.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0006> created at line 391.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0007> created at line 391.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0008> created at line 401.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0009> created at line 401.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0010> created at line 409.
+    Found 32-bit comparator greatequal for signal <Green_VGA$cmp_ge0011> created at line 409.
+    Found 32-bit comparator greater for signal <Green_VGA$cmp_gt0000> created at line 376.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0000> created at line 375.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0001> created at line 375.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0002> created at line 383.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0003> created at line 383.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0004> created at line 383.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0005> created at line 391.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0006> created at line 391.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0007> created at line 401.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0008> created at line 401.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0009> created at line 409.
+    Found 32-bit comparator lessequal for signal <Green_VGA$cmp_le0010> created at line 409.
+    Found 32-bit comparator less for signal <Green_VGA$cmp_lt0000> created at line 376.
+    Found 32-bit comparator greatequal for signal <H_sync_VGA$cmp_ge0000> created at line 145.
+    Found 32-bit comparator lessequal for signal <H_sync_VGA$cmp_le0000> created at line 145.
+    Found 32-bit up counter for signal <hPos>.
+    Found 32-bit updown counter for signal <p1Bot>.
+    Found 32-bit comparator greatequal for signal <p1Bot$cmp_ge0000> created at line 210.
+    Found 32-bit comparator greater for signal <p1Bot$cmp_gt0000> created at line 213.
+    Found 32-bit comparator less for signal <p1Bot$cmp_lt0000> created at line 210.
+    Found 32-bit updown counter for signal <p1Top>.
+    Found 32-bit updown counter for signal <p2Bot>.
+    Found 32-bit comparator greatequal for signal <p2Bot$cmp_ge0000> created at line 240.
+    Found 32-bit comparator greater for signal <p2Bot$cmp_gt0000> created at line 242.
+    Found 32-bit comparator less for signal <p2Bot$cmp_lt0000> created at line 240.
+    Found 32-bit updown counter for signal <p2Top>.
+    Found 32-bit up counter for signal <p_counter>.
+    Found 32-bit comparator greater for signal <V_sync_VGA$cmp_gt0000> created at line 158.
+    Found 32-bit comparator lessequal for signal <V_sync_VGA$cmp_le0000> created at line 158.
+    Found 1-bit register for signal <vclk>.
+    Found 1-bit register for signal <vid_on>.
+    Found 32-bit comparator lessequal for signal <vid_on$cmp_le0000> created at line 171.
+    Found 32-bit comparator lessequal for signal <vid_on$cmp_le0001> created at line 171.
+    Found 32-bit up counter for signal <vPos>.
+    Summary:
+	inferred   8 Counter(s).
+	inferred  31 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  47 Comparator(s).
+Unit <pong> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 2
+# Counters                                             : 8
+ 32-bit up counter                                     : 4
+ 32-bit updown counter                                 : 4
+# Registers                                            : 12
+ 1-bit register                                        : 7
+ 32-bit register                                       : 2
+ 8-bit register                                        : 3
+# Comparators                                          : 47
+ 32-bit comparator greatequal                          : 15
+ 32-bit comparator greater                             : 9
+ 32-bit comparator less                                : 8
+ 32-bit comparator lessequal                           : 15
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 2
+# Counters                                             : 8
+ 32-bit up counter                                     : 4
+ 32-bit updown counter                                 : 4
+# Registers                                            : 95
+ Flip-Flops                                            : 95
+# Comparators                                          : 47
+ 32-bit comparator greatequal                          : 15
+ 32-bit comparator greater                             : 9
+ 32-bit comparator less                                : 8
+ 32-bit comparator lessequal                           : 15
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <Blue_VGA_0> in Unit <pong> is equivalent to the following 7 FFs/Latches, which will be removed : <Blue_VGA_1> <Blue_VGA_2> <Blue_VGA_3> <Blue_VGA_4> <Blue_VGA_5> <Blue_VGA_6> <Blue_VGA_7> 
+INFO:Xst:2261 - The FF/Latch <Green_VGA_0> in Unit <pong> is equivalent to the following 7 FFs/Latches, which will be removed : <Green_VGA_1> <Green_VGA_2> <Green_VGA_3> <Green_VGA_4> <Green_VGA_5> <Green_VGA_6> <Green_VGA_7> 
+INFO:Xst:2261 - The FF/Latch <Red_VGA_0> in Unit <pong> is equivalent to the following 7 FFs/Latches, which will be removed : <Red_VGA_1> <Red_VGA_2> <Red_VGA_3> <Red_VGA_4> <Red_VGA_5> <Red_VGA_6> <Red_VGA_7> 
+
+Optimizing unit <pong> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <vclk> in Unit <pong> is equivalent to the following FF/Latch, which will be removed : <DAC_CLK> 
+Found area constraint ratio of 100 (+ 5) on block pong, actual ratio is 17.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 329
+ Flip-Flops                                            : 329
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pong.ngr
+Top Level Output File Name         : pong
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 32
+
+Cell Usage :
+# BELS                             : 3160
+#      GND                         : 1
+#      INV                         : 80
+#      LUT1                        : 216
+#      LUT2                        : 814
+#      LUT2_L                      : 2
+#      LUT3                        : 21
+#      LUT3_L                      : 6
+#      LUT4                        : 372
+#      LUT4_D                      : 5
+#      LUT4_L                      : 4
+#      MUXCY                       : 1254
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 380
+# FlipFlops/Latches                : 329
+#      FDC                         : 102
+#      FDCE                        : 200
+#      FDPE                        : 26
+#      FDR                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 31
+#      IBUF                        : 4
+#      OBUF                        : 27
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      788  out of   4656    16%  
+ Number of Slice Flip Flops:            329  out of   9312     3%  
+ Number of 4 input LUTs:               1520  out of   9312    16%  
+ Number of IOs:                          32
+ Number of bonded IOBs:                  32  out of    232    13%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+vclk                               | BUFG                   | 328   |
+clk                                | BUFGP                  | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+N0(XST_GND:G)                      | NONE(Blue_VGA_0)       | 328   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.999ns (Maximum Frequency: 100.013MHz)
+   Minimum input arrival time before clock: 5.813ns
+   Maximum output required time after clock: 4.326ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vclk'
+  Clock period: 9.999ns (frequency: 100.013MHz)
+  Total number of paths / destination ports: 191492 / 554
+-------------------------------------------------------------------------
+Delay:               9.999ns (Levels of Logic = 35)
+  Source:            bTop_3 (FF)
+  Destination:       bMove_1 (FF)
+  Source Clock:      vclk rising
+  Destination Clock: vclk rising
+
+  Data Path: bTop_3 to bMove_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.514   0.795  bTop_3 (bTop_3)
+     LUT1:I0->O            1   0.612   0.000  Madd_bBot_cy<3>_rt (Madd_bBot_cy<3>_rt)
+     MUXCY:S->O            1   0.404   0.000  Madd_bBot_cy<3> (Madd_bBot_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<4> (Madd_bBot_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<5> (Madd_bBot_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<6> (Madd_bBot_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<7> (Madd_bBot_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<8> (Madd_bBot_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<9> (Madd_bBot_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<10> (Madd_bBot_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<11> (Madd_bBot_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<12> (Madd_bBot_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<13> (Madd_bBot_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<14> (Madd_bBot_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<15> (Madd_bBot_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<16> (Madd_bBot_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<17> (Madd_bBot_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<18> (Madd_bBot_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<19> (Madd_bBot_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<20> (Madd_bBot_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<21> (Madd_bBot_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<22> (Madd_bBot_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<23> (Madd_bBot_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<24> (Madd_bBot_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<25> (Madd_bBot_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<26> (Madd_bBot_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<27> (Madd_bBot_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<28> (Madd_bBot_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Madd_bBot_cy<29> (Madd_bBot_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Madd_bBot_cy<30> (Madd_bBot_cy<30>)
+     XORCY:CI->O           7   0.699   0.671  Madd_bBot_xor<31> (bBot<31>)
+     LUT2:I1->O            1   0.612   0.000  Mcompar_bMove_1_cmp_lt0003_lut<31> (Mcompar_bMove_1_cmp_lt0003_lut<31>)
+     MUXCY:S->O            1   0.752   0.387  Mcompar_bMove_1_cmp_lt0003_cy<31> (Mcompar_bMove_1_cmp_lt0003_cy<31>)
+     LUT4:I2->O            2   0.612   0.383  bMove_1_and000757_SW0 (N151)
+     LUT4_L:I3->LO         1   0.612   0.103  bMove_1_and000757 (bMove_1_and0007)
+     LUT4:I3->O            1   0.612   0.357  bMove_1_not000122 (bMove_1_not0001)
+     FDCE:CE                   0.483          bMove_1
+    ----------------------------------------
+    Total                      9.999ns (7.302ns logic, 2.696ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.760ns (frequency: 568.069MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.760ns (Levels of Logic = 0)
+  Source:            vclk (FF)
+  Destination:       vclk (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: vclk to vclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.514   0.451  vclk (vclk)
+     FDR:R                     0.795          vclk
+    ----------------------------------------
+    Total                      1.760ns (1.309ns logic, 0.451ns route)
+                                       (74.4% logic, 25.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'vclk'
+  Total number of paths / destination ports: 4992 / 256
+-------------------------------------------------------------------------
+Offset:              5.813ns (Levels of Logic = 34)
+  Source:            p2_Down (PAD)
+  Destination:       p2Bot_31 (FF)
+  Destination Clock: vclk rising
+
+  Data Path: p2_Down to p2Bot_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            67   1.106   1.151  p2_Down_IBUF (p2_Down_IBUF)
+     LUT3:I1->O            2   0.612   0.380  p2Bot_not0003_inv2 (p2Bot_not0003_inv)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<0> (Mcount_p2Bot_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<1> (Mcount_p2Bot_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<2> (Mcount_p2Bot_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<3> (Mcount_p2Bot_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<4> (Mcount_p2Bot_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<5> (Mcount_p2Bot_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<6> (Mcount_p2Bot_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<7> (Mcount_p2Bot_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<8> (Mcount_p2Bot_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<9> (Mcount_p2Bot_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_p2Bot_cy<10> (Mcount_p2Bot_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<11> (Mcount_p2Bot_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<12> (Mcount_p2Bot_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<13> (Mcount_p2Bot_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<14> (Mcount_p2Bot_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<15> (Mcount_p2Bot_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<16> (Mcount_p2Bot_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<17> (Mcount_p2Bot_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<18> (Mcount_p2Bot_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<19> (Mcount_p2Bot_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<20> (Mcount_p2Bot_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<21> (Mcount_p2Bot_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<22> (Mcount_p2Bot_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<23> (Mcount_p2Bot_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<24> (Mcount_p2Bot_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<25> (Mcount_p2Bot_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<26> (Mcount_p2Bot_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<27> (Mcount_p2Bot_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<28> (Mcount_p2Bot_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_p2Bot_cy<29> (Mcount_p2Bot_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Mcount_p2Bot_cy<30> (Mcount_p2Bot_cy<30>)
+     XORCY:CI->O           1   0.699   0.000  Mcount_p2Bot_xor<31> (Result<31>)
+     FDCE:D                    0.268          p2Bot_31
+    ----------------------------------------
+    Total                      5.813ns (4.281ns logic, 1.531ns route)
+                                       (73.7% logic, 26.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.134ns (Levels of Logic = 1)
+  Source:            vclk (FF)
+  Destination:       DAC_CLK (PAD)
+  Source Clock:      clk rising
+
+  Data Path: vclk to DAC_CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.514   0.451  vclk (vclk)
+     OBUF:I->O                 3.169          DAC_CLK_OBUF (DAC_CLK)
+    ----------------------------------------
+    Total                      4.134ns (3.683ns logic, 0.451ns route)
+                                       (89.1% logic, 10.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vclk'
+  Total number of paths / destination ports: 26 / 26
+-------------------------------------------------------------------------
+Offset:              4.326ns (Levels of Logic = 1)
+  Source:            Green_VGA_0 (FF)
+  Destination:       Green_VGA<7> (PAD)
+  Source Clock:      vclk rising
+
+  Data Path: Green_VGA_0 to Green_VGA<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              8   0.514   0.643  Green_VGA_0 (Green_VGA_0)
+     OBUF:I->O                 3.169          Green_VGA_7_OBUF (Green_VGA<7>)
+    ----------------------------------------
+    Total                      4.326ns (3.683ns logic, 0.643ns route)
+                                       (85.1% logic, 14.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.92 secs
+ 
+--> 
+
+
+Total memory usage is 677320 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
